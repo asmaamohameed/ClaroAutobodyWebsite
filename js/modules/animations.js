@@ -33,8 +33,6 @@ window.Claro.animations = {
           scrollTrigger: { trigger: el, start: 'top 90%' } });
       });
 
-      gsap.to('.whyus-bg', { yPercent: 16, ease: 'none',
-        scrollTrigger: { trigger: '.whyus', start: 'top bottom', end: 'bottom top', scrub: true } });
 
       window.ScrollTrigger.refresh();
       window.addEventListener('load', function () { window.ScrollTrigger.refresh(); });

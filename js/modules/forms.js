@@ -31,6 +31,5 @@ window.Claro.forms = {
 
   init: function () {
     this.wire('leadForm', 'formSuccess');
-    this.wire('leadForm2', 'formSuccess2');
   }
 };

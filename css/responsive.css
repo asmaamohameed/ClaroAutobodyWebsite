@@ -6,11 +6,9 @@
 }
 @media(max-width:1080px){
   .bento{grid-template-columns:repeat(3,1fr);grid-auto-rows:160px}
-  .hero .wrap,.whyus .wrap,.area .wrap,.contact .wrap,.faq-wrap{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr 1fr}
+  .hero .wrap,.contact .wrap,.faq-wrap{grid-template-columns:1fr}
   .t-grid{grid-template-columns:1fr 1fr}
   .fcols{grid-template-columns:1fr 1fr}
-  .svc-mini{grid-template-columns:1fr}
 }
 @media(max-width:720px){
   .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px;gap:10px}
@@ -33,10 +31,8 @@
   .hero{padding:165px 0 70px}
   .hero h1{font-size:44px}
   .h2{font-size:34px}
-  .cta-band h2{font-size:38px}
-  .steps,.svc-grid,.t-grid,.fcols{grid-template-columns:1fr}
+  .svc-grid,.t-grid,.fcols{grid-template-columns:1fr}
   .fgrid{grid-template-columns:1fr}
   .svc .imgwrap{height:210px}
-  .map{height:320px}
-  .cta-phone{font-size:36px}
+  .contact-map .map{height:300px}
 }

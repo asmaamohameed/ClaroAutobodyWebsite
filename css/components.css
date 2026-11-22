@@ -28,6 +28,11 @@
 .faq-a p{padding:0 0 24px;color:var(--muted);max-width:640px}
 
 
+/* FAQ on a dark section */
+.faq.dark .faq-item{border-color:var(--line-dk)}
+.faq.dark .faq-q{color:#fff}
+.faq.dark .faq-a p{color:var(--muted-dk)}
+
 /* ---------- Lightbox ---------- */
 .lightbox{position:fixed;inset:0;z-index:1300;display:flex;flex-direction:column;background:rgba(6,7,8,.96);backdrop-filter:blur(8px);opacity:0;transition:opacity .25s}
 .lightbox.is-open{opacity:1}

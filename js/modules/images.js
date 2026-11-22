@@ -1,12 +1,12 @@
 /**
- * Image fallbacks: if a photo fails, try its data-fallback once,
- * then hide it so the illustrated background underneath shows.
+ * Image fallbacks for photos inside .imgwrap: if a photo fails, try its
+ * data-fallback once, then hide it so the illustrated background shows.
  */
 window.Claro = window.Claro || {};
 
 window.Claro.images = {
   init: function () {
-    document.querySelectorAll('img[data-fallback]').forEach(function (img) {
+    document.querySelectorAll('.imgwrap img').forEach(function (img) {
       function onError() {
         var fallback = img.getAttribute('data-fallback');
         if (fallback && img.src !== fallback) {
