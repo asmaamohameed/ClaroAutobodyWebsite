@@ -1,59 +1,38 @@
 /**
- * Bento gallery + lightbox.
- * Renders tiles from Claro.galleryData into #galleryGrid and drives the
- * #lightbox viewer (prev/next, thumbnails, keyboard, swipe).
+ * Gallery lightbox.
+ * The photo tiles live in index.html (so search engines see them). This
+ * module reads those tiles and adds the viewer: prev/next, counter,
+ * thumbnails, keyboard and swipe. To add a photo, copy one <li> in
+ * #galleryGrid and keep the big, tall, tall / tall, big, tall rhythm.
  */
 window.Claro = window.Claro || {};
 
 window.Claro.gallery = (function () {
-  var items = [];
+  var slides = [];
   var current = 0;
   var lastFocus = null;
   var el = {};
 
-  function srcFor(item, width) {
-    if (item.src) return item.src;
-    return window.Claro.galleryData.googleBase + item.id + '=w' + width + '-k-no';
-  }
-
-  function shapeOf(item) {
-    return item.size === 'big' ? 'big' : 'tall';
-  }
-
-  function pad(n) { return n < 10 ? '0' + n : String(n); }
-
-  function markFailed(img, holder) {
-    holder.classList.add('is-failed');
+  function markFailed(tile, img) {
+    tile.classList.add('is-failed');
     img.removeAttribute('src');
   }
 
-  function buildTile(item, index) {
-    var tile = document.createElement('button');
-    tile.type = 'button';
-    tile.className = 'bento__tile bento__tile--' + shapeOf(item) + (item.featured ? ' bento__tile--featured' : '') + ' reveal';
-    tile.setAttribute('role', 'listitem');
-    tile.setAttribute('aria-label', 'Open photo ' + (index + 1) + ' of ' + items.length);
-    tile.dataset.index = index;
-
-    var img = document.createElement('img');
-    img.alt = item.alt;
-    img.loading = 'lazy';
-    img.decoding = 'async';
-    img.referrerPolicy = 'no-referrer';
-    img.addEventListener('error', function () { markFailed(img, tile); });
-    img.src = srcFor(item, item.featured ? 1600 : 900);
-
-    tile.innerHTML =
-      '<span class="bento__num">' + pad(index + 1) + '</span>' +
-      '<span class="bento__zoom"><i class="ico"><svg aria-hidden="true"><use href="#i-zoom-in"/></svg></i></span>' +
-      (item.featured ? '<span class="bento__caption"><b>Inside Claro Auto Body</b>Real photos from our NE Portland shop</span>' : '');
-    tile.insertBefore(img, tile.firstChild);
-    tile.addEventListener('click', function () { open(index); });
-    return tile;
+  function readTiles(grid) {
+    return Array.prototype.map.call(grid.querySelectorAll('.bento__tile'), function (tile, i) {
+      var img = tile.querySelector('img');
+      img.addEventListener('error', function () { markFailed(tile, img); });
+      if (img.complete && img.naturalWidth === 0) markFailed(tile, img);
+      tile.addEventListener('click', function () {
+        if (!tile.classList.contains('is-failed')) open(i);
+      });
+      var src = img.getAttribute('src') || '';
+      return { full: tile.getAttribute('data-full'), thumb: src.replace(/=w\d+-k-no$/, '=w200-k-no'), alt: img.alt };
+    });
   }
 
   function buildThumbs() {
-    items.forEach(function (item, i) {
+    slides.forEach(function (slide, i) {
       var b = document.createElement('button');
       b.type = 'button';
       b.className = 'lightbox__thumb';
@@ -63,7 +42,7 @@ window.Claro.gallery = (function () {
       img.loading = 'lazy';
       img.referrerPolicy = 'no-referrer';
       img.addEventListener('error', function () { b.classList.add('is-failed'); });
-      img.src = srcFor(item, 200);
+      if (slide.thumb) img.src = slide.thumb;
       b.appendChild(img);
       b.addEventListener('click', function () { show(i); });
       el.thumbs.appendChild(b);
@@ -71,15 +50,14 @@ window.Claro.gallery = (function () {
   }
 
   function show(index) {
-    current = (index + items.length) % items.length;
-    var item = items[current];
+    current = (index + slides.length) % slides.length;
+    var slide = slides[current];
     el.img.classList.add('is-changing');
-    el.img.onload = function () { el.img.classList.remove('is-changing'); };
-    el.img.onerror = function () { el.img.classList.remove('is-changing'); };
-    el.img.src = srcFor(item, 2000);
-    el.img.alt = item.alt;
-    el.caption.textContent = item.alt;
-    el.count.textContent = (current + 1) + ' / ' + items.length;
+    el.img.onload = el.img.onerror = function () { el.img.classList.remove('is-changing'); };
+    el.img.src = slide.full;
+    el.img.alt = slide.alt;
+    el.caption.textContent = slide.alt;
+    el.count.textContent = (current + 1) + ' / ' + slides.length;
     Array.prototype.forEach.call(el.thumbs.children, function (t, i) {
       var active = i === current;
       t.classList.toggle('is-active', active);
@@ -120,15 +98,7 @@ window.Claro.gallery = (function () {
   }
 
   function init() {
-    var data = window.Claro.galleryData;
     var grid = document.getElementById('galleryGrid');
-    if (!data || !grid) return;
-
-    items = data.items.map(function (item, i) {
-      item.alt = item.alt || 'Claro Auto Body, photo ' + (i + 1) + ' of ' + data.items.length;
-      return item;
-    });
-
     el = {
       box: document.getElementById('lightbox'),
       stage: document.getElementById('lbStage'),
@@ -138,17 +108,15 @@ window.Claro.gallery = (function () {
       thumbs: document.getElementById('lbThumbs'),
       close: document.getElementById('lbClose')
     };
+    if (!grid || !el.box) return;
 
-    var frag = document.createDocumentFragment();
-    items.forEach(function (item, i) { frag.appendChild(buildTile(item, i)); });
-    grid.appendChild(frag);
+    slides = readTiles(grid);
+    if (!slides.length) return;
     buildThumbs();
 
-    document.querySelectorAll('[data-gallery-count]').forEach(function (n) { n.textContent = items.length; });
     document.querySelectorAll('[data-gallery-open]').forEach(function (b) {
       b.addEventListener('click', function () { open(Number(b.getAttribute('data-gallery-open')) || 0); });
     });
-
     el.close.addEventListener('click', close);
     document.getElementById('lbPrev').addEventListener('click', function () { show(current - 1); });
     document.getElementById('lbNext').addEventListener('click', function () { show(current + 1); });

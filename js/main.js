@@ -1,6 +1,6 @@
 /**
  * Entry point. Each module is isolated so one failure can't break the rest.
- * Gallery runs before animations so its tiles get scroll reveals too.
+ * Animations run last so every section is in place before reveals start.
  */
 (function () {
   var C = window.Claro || {};

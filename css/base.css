@@ -69,3 +69,4 @@ i.ico.brand svg{fill:currentColor;stroke:none}
 .section-head__side{display:flex;flex-direction:column;align-items:flex-start;gap:20px;max-width:520px}
 [hidden]{display:none!important}
 .no-scroll{overflow:hidden}
+address{font-style:normal}

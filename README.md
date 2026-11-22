@@ -6,7 +6,8 @@ It is a static site (plain HTML, CSS and JavaScript, no build step), ready for N
 ## Structure
 
 ```
-index.html              Markup only (SEO head, sections, SVG icon sprite)
+index.html              Markup only (SEO head + JSON-LD, sections, gallery, SVG icon sprite)
+404.html                Not-found page (Netlify serves it automatically)
 css/
   base.css              Design tokens, reset, typography, buttons, utilities
   layout.css            Progress bar, header + nav, mobile menu, footer, floating call button
@@ -14,7 +15,6 @@ css/
   sections.css          Hero, marquee, steps, services, why us, area, gallery, reviews, CTA, contact
   responsive.css        Breakpoints: 1279px (nav), 1080px (tablet), 720px (mobile)
 js/
-  data/gallery.js       Gallery photo list (edit this to add or swap photos)
   modules/              One small module per feature, each exposes init()
     images.js           Photo fallbacks
     header.js           Sticky header state, scroll progress, footer year
@@ -22,10 +22,12 @@ js/
     forms.js            Netlify form submit over fetch
     faq.js              Accordion
     smooth-anchors.js   In-page links with header offset
-    gallery.js          Bento gallery + lightbox (arrows, thumbnails, keyboard, swipe)
+    gallery.js          Lightbox for the gallery tiles (arrows, thumbnails, keyboard, swipe)
     animations.js       GSAP scroll reveals, always falls back to visible content
   main.js               Starts every module, isolated so one error can't break the page
 sitemap.xml, robots.txt
+favicon.svg, apple-touch-icon.png, icon-192.png, icon-512.png, site.webmanifest
+og-image.jpg            1200x630 share image for Facebook, WhatsApp, X, LinkedIn
 ```
 
 Scripts are classic deferred scripts (no ES modules) so the site also works when `index.html` is opened directly from disk.
@@ -33,7 +35,7 @@ The SVG icon sprite stays inline in `index.html` for the same reason: browsers b
 
 ## Editing
 
-- **Gallery photos:** edit `js/data/gallery.js`. Use `id` for a Google Maps photo key or `src` for a local file (for example `images/gallery/bumper.jpg`). Keep the `big, tall, tall / tall, big, tall` size rhythm so the grid has no gaps.
+- **Gallery photos:** the tiles are plain HTML inside `#galleryGrid` in `index.html`, so search engines can index them. Copy an `<li>` to add a photo, set `src`, `data-full`, `width`, `height` and a descriptive `alt`. Keep the `big, tall, tall / tall, big, tall` rhythm so the grid has no gaps.
 - **Colors and fonts:** change the CSS variables at the top of `css/base.css`.
 - **Business details:** phone, address and hours appear in `index.html` (header, contact, footer) and in the JSON-LD block in the `<head>`.
 
@@ -50,3 +52,17 @@ Two forms are included: `estimate` (hero) and `contact`. Each has a required `em
 1. Deploy the folder to Netlify. Forms are detected at deploy time.
 2. In Netlify: Configuration > Notifications > Form submission notifications > Add notification > Email notification, and enter the shop's inbox.
 3. Send a test submission and check it appears under Forms and in the inbox.
+
+## SEO checklist (already in place)
+
+- Title and meta description with service + city, canonical URL, `max-image-preview:large`
+- Open Graph + Twitter cards with a real 1200x630 `og-image.jpg`
+- JSON-LD graph: `WebSite`, `WebPage`, `AutoBodyShop` (address, geo, phone, hours, services, languages, payment, Google Maps + Yelp links) and `FAQPage`
+- No `aggregateRating` in the schema: add one only if it matches a rating customers can see on the page and verify
+- One `<h1>`, ordered headings, descriptive `alt` text, `width`/`height` on every image (no layout shift)
+- Gallery and reviews are static HTML, not injected by JavaScript
+- Hero image preloaded, other images lazy, scripts deferred, map iframe lazy
+- `<address>` markup and the same name, address and phone (NAP) everywhere
+- `sitemap.xml`, `robots.txt`, favicon set, web manifest, `404.html`
+
+After launch: verify the site in Google Search Console, submit `sitemap.xml`, and add the website link to the Google Business Profile so both point at each other.

@@ -83,10 +83,10 @@
 
 /* ---------- Gallery (bento) ---------- */
 .gallery{background:var(--cream)}
-.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;grid-auto-flow:dense;gap:14px}
-.bento__tile{position:relative;overflow:hidden;border:0;padding:0;border-radius:16px;cursor:zoom-in;background:linear-gradient(135deg,#1C1F25,#3a1a0c 60%,var(--accent-dk));box-shadow:var(--shadow-sm);isolation:isolate}
-.bento__tile--big{grid-column:span 2;grid-row:span 2}
-.bento__tile--tall{grid-row:span 2}
+.bento{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;grid-auto-flow:dense;gap:14px}
+.bento__tile{display:block;width:100%;height:100%;position:relative;overflow:hidden;border:0;padding:0;border-radius:16px;cursor:zoom-in;background:linear-gradient(135deg,#1C1F25,#3a1a0c 60%,var(--accent-dk));box-shadow:var(--shadow-sm);isolation:isolate}
+.bento__item--big{grid-column:span 2;grid-row:span 2}
+.bento__item--tall{grid-row:span 2}
 .bento__tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .5s}
 .bento__tile::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(11,12,14,.75) 0%,rgba(11,12,14,0) 45%);opacity:.55;transition:opacity .4s}
 .bento__tile:hover img,.bento__tile:focus-visible img{transform:scale(1.07)}
