@@ -1,0 +1,50 @@
+/* Claro Auto Body | Page chrome: progress bar, header, mobile menu, footer, floating call */
+
+/* ---------- Scroll progress ---------- */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:1100}
+
+/* ---------- Header & navigation ---------- */
+.site-header{position:fixed;top:0;left:0;width:100%;z-index:1000}
+.topstrip{background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:9px 6vw;overflow:hidden;max-height:80px;opacity:1;transition:max-height .4s,opacity .3s,padding .35s;display:flex;justify-content:center;gap:34px;flex-wrap:wrap}
+.topstrip span{display:inline-flex;align-items:center;gap:8px}
+.site-header.scrolled .topstrip{max-height:0;opacity:0;padding-top:0;padding-bottom:0}
+nav{display:flex;align-items:center;justify-content:space-between;padding:0 6vw;height:84px;background:rgba(11,12,14,.96);backdrop-filter:blur(10px);color:#fff;transition:height .35s,box-shadow .35s;border-bottom:1px solid var(--line-dk)}
+.site-header.scrolled nav{height:64px;box-shadow:0 8px 26px rgba(0,0,0,.35)}
+.logo{display:flex;align-items:center;gap:12px}
+.logo svg{width:40px;height:40px;flex:none}
+.logo b{font-family:var(--disp);font-size:28px;font-weight:900;letter-spacing:.06em;line-height:1}
+.logo small{display:block;font-size:10px;font-weight:700;letter-spacing:.32em;color:var(--accent);margin-top:2px}
+.navlinks{display:flex;align-items:center;gap:26px;font-size:14.5px;font-weight:500;white-space:nowrap}
+.navlinks a.link{opacity:.82;transition:opacity .2s}
+.navlinks a.link:hover{opacity:1}
+.navphone{display:inline-flex;align-items:center;gap:8px;font-weight:700}
+.navphone i{color:var(--accent)}
+.pill{background:var(--accent);color:#fff;padding:11px 20px;border-radius:40px;font-weight:700;font-size:14px}
+.burger{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer}
+.mmenu{position:fixed;inset:0;background:var(--ink);z-index:1200;display:flex;flex-direction:column;justify-content:center;padding:0 10vw;gap:22px;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.2,1)}
+.mmenu.open{transform:none}
+.mmenu a{font-family:var(--disp);font-size:44px;font-weight:800;text-transform:uppercase;color:#fff}
+.mmenu .close{position:absolute;top:26px;right:6vw;background:none;border:0;color:#fff;font-size:30px;cursor:pointer}
+
+/* ---------- Footer ---------- */
+footer .logo{color:#fff}
+.fico{color:var(--accent);margin-right:8px}
+footer{background:#060708;color:#cfd3d9;border-top:4px solid var(--accent);padding:80px 0 0}
+.fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:50px}
+footer h3{font-size:20px;color:#fff;margin-bottom:18px;letter-spacing:.06em}
+footer ul{list-style:none;display:grid;gap:10px;font-size:15px}
+footer ul a{opacity:.8}
+footer ul a:hover{opacity:1;color:var(--accent-2)}
+.fbrand p{font-size:15px;color:var(--muted-dk);margin:18px 0 22px;max-width:320px}
+.socials{display:flex;gap:10px}
+.socials a{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-dk);display:grid;place-items:center;transition:background .2s,border-color .2s}
+.socials a:hover{background:var(--accent);border-color:var(--accent)}
+.fbottom{margin-top:60px;border-top:1px solid var(--line-dk);padding:22px 0;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13.5px;color:var(--muted-dk)}
+
+/* ---------- Floating call button ---------- */
+.float-call{position:fixed;right:22px;bottom:22px;z-index:900;width:60px;height:60px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:22px;box-shadow:0 12px 30px rgba(255,91,20,.45)}
+.float-call::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--accent);animation:ping 2.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+.float-call .tip{position:absolute;right:72px;background:var(--ink);color:#fff;font-size:13px;font-weight:600;padding:8px 12px;border-radius:6px;white-space:nowrap;opacity:0;transform:translateX(8px);transition:.25s;pointer-events:none}
+.float-call:hover .tip{opacity:1;transform:none}
+

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Replace claroautobody.com with the real domain before launch
+Sitemap: https://claroautobody.com/sitemap.xml
