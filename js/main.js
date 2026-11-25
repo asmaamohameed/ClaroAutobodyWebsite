@@ -4,7 +4,7 @@
  */
 (function () {
   var C = window.Claro || {};
-  var order = ['images', 'header', 'menu', 'forms', 'faq', 'anchors', 'gallery', 'animations'];
+  var order = ['images', 'header', 'menu', 'forms', 'faq', 'anchors', 'beforeAfter', 'gallery', 'animations'];
 
   order.forEach(function (name) {
     try {

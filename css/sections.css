@@ -63,6 +63,20 @@
 .bento__tile.is-failed::before{content:"Claro Auto Body photo";position:absolute;inset:auto 0 50% 0;z-index:2;text-align:center;color:rgba(255,255,255,.7);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
 .bento__tile--featured.is-failed::before{content:none}
 
+/* ---------- Before & after (inside Our work) ---------- */
+.ba-block{margin-bottom:64px}
+.ba-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.ba-head h3,.gallery-subtitle{font-size:30px}
+.ba-head p{color:var(--muted-dk);font-size:15px}
+.gallery-subtitle{margin-bottom:22px}
+.ba-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:18px;align-items:stretch}
+.ba-grid>*{min-width:0}
+.ba-card{margin:0;display:flex;flex-direction:column;gap:12px}
+.ba-card--tall .ba{aspect-ratio:4/5}
+.ba-card--wide .ba{flex:1;min-height:280px}
+.ba-card figcaption{font-size:14.5px;color:var(--muted-dk)}
+.ba-card figcaption b{color:#fff;margin-right:6px}
+
 /* ---------- Testimonials ---------- */
 .testi{background:var(--cream)}
 .t-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:50px}

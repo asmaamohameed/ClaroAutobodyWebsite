@@ -22,9 +22,11 @@ js/
     forms.js            Netlify estimate form submit over fetch
     faq.js              Accordion
     smooth-anchors.js   In-page links with header offset
+    before-after.js     Before/after drag sliders (range input, hint nudge on first view)
     gallery.js          Lightbox for the gallery tiles (arrows, thumbnails, keyboard, swipe)
     animations.js       GSAP scroll reveals, always falls back to visible content
   main.js               Starts every module, isolated so one error can't break the page
+images/before-after/     Self-hosted before/after photo pairs
 sitemap.xml, robots.txt
 favicon.svg, apple-touch-icon.png, icon-192.png, icon-512.png, site.webmanifest
 og-image.jpg            1200x630 share image for Facebook, WhatsApp, X, LinkedIn
@@ -35,13 +37,15 @@ The SVG icon sprite stays inline in `index.html` for the same reason: browsers b
 
 ## Page sections
 
-Hero with estimate form, Services, Our work (gallery), Reviews, FAQ, Contact with map. All photos are real photos from the shop's Google listing.
+Hero with estimate form, Services, Our work (before/after sliders + gallery), Reviews, FAQ, Contact with map. All photos are real photos from the shop's Google listing.
 
 ## Editing
 
 - **Gallery photos:** the tiles are plain HTML inside `#galleryGrid` in `index.html`, so search engines can index them. Copy an `<li>` to add a photo, set `src`, `data-full`, `width`, `height` and a descriptive `alt`. Keep the `big, tall, tall / tall, big, tall` rhythm so the grid has no gaps.
 - **Colors and fonts:** change the CSS variables at the top of `css/base.css`.
 - **Business details:** phone, address and hours appear in `index.html` (header, contact, footer) and in the JSON-LD block in the `<head>`.
+
+- **Before/after pairs:** add both photos to `images/before-after/` (`name-before.jpg`, `name-after.jpg`) and copy one `<figure class="ba-card">` in `index.html`. Use `ba-card--wide` for landscape photos and `ba-card--tall` for portrait ones.
 
 ## Before launch
 
