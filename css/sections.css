@@ -69,11 +69,12 @@
 .ba-head h3,.gallery-subtitle{font-size:30px}
 .ba-head p{color:var(--muted-dk);font-size:15px}
 .gallery-subtitle{margin-bottom:22px}
-.ba-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:18px;align-items:stretch}
+.ba-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;column-gap:18px;row-gap:12px}
 .ba-grid>*{min-width:0}
-.ba-card{margin:0;display:flex;flex-direction:column;gap:12px}
+/* subgrid shares one photo row and one caption row, so every frame is the same height */
+.ba-card{margin:0;display:grid;grid-row:span 2;grid-template-rows:subgrid}
 .ba-card--tall .ba{aspect-ratio:4/5}
-.ba-card--wide .ba{flex:1;min-height:280px}
+.ba-card--wide .ba{height:100%}
 .ba-card figcaption{font-size:14.5px;color:var(--muted-dk)}
 .ba-card figcaption b{color:#fff;margin-right:6px}
 
