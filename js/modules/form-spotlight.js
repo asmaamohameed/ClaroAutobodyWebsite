@@ -1,8 +1,9 @@
 /**
  * Form spotlight. Any link to #heroForm ("Get my free estimate", the nav
- * pill, service cards) scrolls to the estimate form; once the scroll stops,
- * the card pops, an orange ring pulses around it and the first field gets
- * focus. With reduced motion it only focuses the field.
+ * pill, service cards) makes the estimate form pop, pulses an orange ring
+ * around it and focuses the first field. If the form is already on screen
+ * the page does not scroll at all; if it is off screen (lower sections,
+ * mobile) the page scrolls to it first. Reduced motion only focuses.
  */
 window.Claro = window.Claro || {};
 
@@ -46,8 +47,27 @@ window.Claro.formSpotlight = {
       })();
     }
 
-    document.querySelectorAll('a[href="#heroForm"]').forEach(function (link) {
-      link.addEventListener('click', function () { whenScrollStops(play); });
-    });
+    // Is most of the card (60%+) visible below the fixed header?
+    function isOnScreen() {
+      var r = card.getBoundingClientRect();
+      var header = document.getElementById('siteHeader');
+      var top = Math.max(r.top, header ? header.offsetHeight : 0);
+      var bottom = Math.min(r.bottom, window.innerHeight);
+      return (bottom - top) / r.height >= 0.6;
+    }
+
+    // Capture phase runs before the smooth-scroll handler on the link,
+    // so an on-screen form can skip the scroll entirely.
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest && e.target.closest('a[href="#heroForm"]');
+      if (!link) return;
+      if (isOnScreen()) {
+        e.preventDefault();
+        e.stopPropagation();
+        play();
+      } else {
+        whenScrollStops(play);
+      }
+    }, true);
   }
 };

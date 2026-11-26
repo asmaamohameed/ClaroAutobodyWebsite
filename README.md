@@ -22,7 +22,7 @@ js/
     forms.js            Netlify estimate form submit over fetch
     faq.js              Accordion
     smooth-anchors.js   In-page links with header offset
-    form-spotlight.js   Pops and rings the estimate form when a "Get my free estimate" link is clicked
+    form-spotlight.js   Pops and rings the estimate form on "Get my free estimate" (no scroll if it is already on screen)
     before-after.js     Before/after drag sliders (range input, hint nudge on first view)
     gallery.js          Lightbox for the gallery tiles (arrows, thumbnails, keyboard, swipe)
     animations.js       GSAP scroll reveals, always falls back to visible content
