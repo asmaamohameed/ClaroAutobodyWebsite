@@ -25,7 +25,7 @@ js/
     smooth-anchors.js   In-page links with header offset
     form-spotlight.js   Pops and rings the estimate form on "Get my free estimate" (no scroll if it is already on screen)
     before-after.js     Before/after drag sliders (range input, hint nudge on first view)
-    reviews.js          Auto-playing reviews carousel (swipe, arrows, dots, pauses on hover)
+    reviews.js          Continuous reviews loop (pauses on hover)
     gallery.js          Lightbox for the gallery tiles (arrows, thumbnails, keyboard, swipe)
     animations.js       GSAP scroll reveals, always falls back to visible content
   main.js               Starts every module, isolated so one error can't break the page
@@ -41,7 +41,7 @@ The SVG icon sprite stays inline in `index.html` for the same reason: browsers b
 
 ## Page sections
 
-Hero with estimate form, Services, Our work (before/after sliders + gallery), Reviews (carousel), FAQ, Contact with map. All photos are real photos from the shop's Google listing.
+Hero with estimate form, Services, Our work (before/after sliders + gallery), Reviews (continuous loop), FAQ, Contact with map. All photos are real photos from the shop's Google listing.
 
 ## Editing
 
