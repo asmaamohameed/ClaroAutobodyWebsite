@@ -22,10 +22,6 @@
 .hero-trust{margin-top:28px;font-size:13.5px;color:var(--muted-dk);display:flex;gap:20px;flex-wrap:wrap}
 .hero-trust span{display:inline-flex;gap:8px;align-items:center}
 .hero-trust i{color:var(--accent)}
-.trustbar{position:relative;z-index:3;border-top:1px solid var(--line-dk);background:rgba(11,12,14,.72);backdrop-filter:blur(8px)}
-.trustbar__list{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:14px 44px;padding-top:18px;padding-bottom:18px;font-size:14.5px;font-weight:600;color:#eef0f3}
-.trustbar__list li{display:inline-flex;align-items:center;gap:9px}
-.trustbar__list i{color:var(--accent)}
 
 /* ---------- Services ---------- */
 .services{background:var(--cream)}

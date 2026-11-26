@@ -40,7 +40,6 @@
   nav{height:64px}
   .hero{padding-top:64px}
   .hero > .wrap{padding-top:40px;padding-bottom:48px}
-  .trustbar__list{justify-content:flex-start;gap:10px 22px;font-size:13px}
   .hero h1{font-size:44px}
   .h2{font-size:34px}
   .svc-grid,.t-grid,.fcols{grid-template-columns:1fr}

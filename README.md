@@ -22,6 +22,7 @@ js/
     forms.js            Netlify estimate form submit over fetch
     faq.js              Accordion
     smooth-anchors.js   In-page links with header offset
+    form-spotlight.js   Pops and rings the estimate form when a "Get my free estimate" link is clicked
     before-after.js     Before/after drag sliders (range input, hint nudge on first view)
     gallery.js          Lightbox for the gallery tiles (arrows, thumbnails, keyboard, swipe)
     animations.js       GSAP scroll reveals, always falls back to visible content
@@ -50,7 +51,7 @@ Hero with estimate form, Services, Our work (before/after sliders + gallery), Re
 ## Before launch
 
 1. Replace `claroautobody.com` with the real domain in `index.html` (canonical, Open Graph, JSON-LD), `sitemap.xml` and `robots.txt`.
-2. Confirm or replace everything tagged `demo` on the page: hours, email and the reply-time promise in the estimate form.
+2. Confirm the details that came from defaults, not from the shop: opening hours, the email address and the "reply within one business day" promise in the estimate form.
 3. Download the gallery photos and host them in the project. Google photo URLs can change over time.
 
 ## Netlify forms
