@@ -1,0 +1,8 @@
+/* Claro Auto Body | Browser workarounds (loaded last so nothing overrides them) */
+/* ---------- Samsung Internet dark mode ----------
+   Samsung's forced dark mode ignores color-scheme and darkens solid
+   background colors (orange turns dark red). It leaves background images
+   alone, so the orange is also painted as a one-color gradient. */
+.btn-primary,.card-form::before,.ba__tag--after,.ba__knob,#progress,.pill,.float-call,.svc-badge,.bento__zoom,.avatar{background-image:var(--accent-paint)}
+.btn-primary:hover,.pill:hover{background-image:var(--accent-paint-hover)}
+.lightbox__btn:hover,.socials a:hover{background-image:var(--accent-paint)}

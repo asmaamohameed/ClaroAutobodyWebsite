@@ -14,6 +14,7 @@ css/
   components.css        Lead forms, FAQ accordion, lightbox
   sections.css          Hero, services, gallery, reviews, contact
   responsive.css        Breakpoints: 1279px (nav), 1080px (tablet), 720px (mobile)
+  compat.css            Browser workarounds (Samsung Internet forced dark mode)
 js/
   modules/              One small module per feature, each exposes init()
     images.js           Photo fallbacks

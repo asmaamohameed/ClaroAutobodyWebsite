@@ -2,6 +2,8 @@
 
 :root{
   color-scheme:light only;
+  --accent-paint:linear-gradient(var(--accent),var(--accent));
+  --accent-paint-hover:linear-gradient(#ff6d2e,#ff6d2e);
   --ink:#0B0C0E;
   --primary:#121418;
   --primary-2:#1C1F25;
@@ -68,3 +70,4 @@ i.ico.brand svg{fill:currentColor;stroke:none}
 [hidden]{display:none!important}
 .no-scroll{overflow:hidden}
 address{font-style:normal}
+
