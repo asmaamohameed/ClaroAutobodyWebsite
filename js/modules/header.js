@@ -1,5 +1,5 @@
 /**
- * Header state (collapse strip + shrink nav after 60px) and the top
+ * Header state (adds a shadow after 60px of scroll) and the top
  * scroll-progress bar. Also fills the footer year.
  */
 window.Claro = window.Claro || {};

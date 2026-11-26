@@ -32,11 +32,10 @@ h1,h2,h3{font-family:var(--disp);font-weight:800;line-height:.98;letter-spacing:
 .reveal{opacity:0;transform:translateY(34px)}
 .demo{display:inline-block;font-family:var(--body);font-size:10.5px;font-weight:600;letter-spacing:.04em;color:var(--accent-dk);background:rgba(255,91,20,.08);border:1px solid rgba(255,91,20,.35);padding:1px 7px;border-radius:20px;text-transform:uppercase;vertical-align:middle;line-height:1.6}
 .dark .demo,.on-dark .demo{color:var(--accent-2);background:rgba(255,91,20,.12)}
-.wrap{max-width:1240px;margin:0 auto;padding:0 6vw}
+.wrap{max-width:1248px;margin:0 auto;padding:0 24px}
 section{position:relative}
 .pad{padding:120px 0}
 .label{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
-.label::before{content:"";width:26px;height:2px;background:var(--accent)}
 .h2{font-size:52px;margin:16px 0 18px}
 .lead{font-size:18px;color:var(--muted);max-width:620px}
 .dark{background:var(--ink);color:#fff}
@@ -62,7 +61,7 @@ i.ico.brand svg{fill:currentColor;stroke:none}
 .link-accent-light{color:var(--accent-2);font-weight:700}
 .c-yelp{color:#D32323}
 .actions{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap}
-.faq-wrap>*,.hero .wrap>*,.contact .wrap>*{min-width:0}
+.faq-wrap>*,.hero > .wrap>*,.contact .wrap>*{min-width:0}
 .btn-outline{border-color:var(--ink);color:var(--ink)}
 .btn-outline:hover{background:var(--ink);color:#fff;transform:translateY(-2px)}
 .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px;flex-wrap:wrap}

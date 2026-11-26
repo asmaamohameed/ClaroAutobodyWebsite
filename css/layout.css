@@ -5,26 +5,27 @@
 
 /* ---------- Header & navigation ---------- */
 .site-header{position:fixed;top:0;left:0;width:100%;z-index:1000}
-.topstrip{background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:9px 6vw;overflow:hidden;max-height:80px;opacity:1;transition:max-height .4s,opacity .3s,padding .35s;display:flex;justify-content:center;gap:34px;flex-wrap:wrap}
-.topstrip span{display:inline-flex;align-items:center;gap:8px}
-.site-header.scrolled .topstrip{max-height:0;opacity:0;padding-top:0;padding-bottom:0}
-nav{display:flex;align-items:center;justify-content:space-between;padding:0 6vw;height:84px;background:rgba(11,12,14,.96);backdrop-filter:blur(10px);color:#fff;transition:height .35s,box-shadow .35s;border-bottom:1px solid var(--line-dk)}
-.site-header.scrolled nav{height:64px;box-shadow:0 8px 26px rgba(0,0,0,.35)}
+nav{height:72px;background:rgba(11,12,14,.97);backdrop-filter:blur(10px);color:#fff;border-bottom:1px solid var(--line-dk);transition:box-shadow .35s}
+.site-header.scrolled nav{box-shadow:0 8px 26px rgba(0,0,0,.35)}
+.nav__inner{height:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px}
+.nav__actions{justify-self:end;display:flex;align-items:center;gap:22px}
 .logo{display:flex;align-items:center;gap:12px}
-.logo svg{width:40px;height:40px;flex:none}
-.logo b{font-family:var(--disp);font-size:28px;font-weight:900;letter-spacing:.06em;line-height:1}
+.logo{justify-self:start}
+.logo svg{width:36px;height:36px;flex:none}
+.logo b{font-family:var(--disp);font-size:25px;font-weight:900;letter-spacing:.06em;line-height:1}
 .logo small{display:block;font-size:10px;font-weight:700;letter-spacing:.32em;color:var(--accent);margin-top:2px}
-.navlinks{display:flex;align-items:center;gap:26px;font-size:14.5px;font-weight:500;white-space:nowrap}
+.navlinks{display:flex;align-items:center;gap:28px;font-size:15px;font-weight:500;white-space:nowrap}
 .navlinks a.link{opacity:.82;transition:opacity .2s}
 .navlinks a.link:hover{opacity:1}
 .navphone{display:inline-flex;align-items:center;gap:8px;font-weight:700}
 .navphone i{color:var(--accent)}
-.pill{background:var(--accent);color:#fff;padding:11px 20px;border-radius:40px;font-weight:700;font-size:14px}
+.pill{background:var(--accent);color:#fff;padding:12px 22px;border-radius:40px;font-weight:700;font-size:15px;box-shadow:0 8px 24px rgba(255,91,20,.35);transition:transform .2s,background .2s}
+.pill:hover{background:#ff6d2e;transform:translateY(-1px)}
 .burger{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer}
 .mmenu{position:fixed;inset:0;background:var(--ink);z-index:1200;display:flex;flex-direction:column;justify-content:center;padding:0 10vw;gap:22px;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.2,1)}
 .mmenu.open{transform:none}
 .mmenu a{font-family:var(--disp);font-size:44px;font-weight:800;text-transform:uppercase;color:#fff}
-.mmenu .close{position:absolute;top:26px;right:6vw;background:none;border:0;color:#fff;font-size:30px;cursor:pointer}
+.mmenu .close{position:absolute;top:20px;right:24px;background:none;border:0;color:#fff;font-size:30px;cursor:pointer}
 
 /* ---------- Footer ---------- */
 footer .logo{color:#fff}

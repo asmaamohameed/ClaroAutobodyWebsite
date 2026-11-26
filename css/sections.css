@@ -1,13 +1,13 @@
 /* Claro Auto Body | Page sections, top to bottom */
 
 /* ---------- Hero ---------- */
-.hero{min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;padding:170px 0 90px}
+.hero{min-height:100vh;display:flex;flex-direction:column;color:#fff;overflow:hidden;padding-top:72px}
 .hero-bg{position:absolute;inset:-6% 0 0 0;z-index:0}
 .hero-bg .imgwrap{position:absolute;inset:0}
 .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(8,9,11,.94) 0%,rgba(8,9,11,.78) 45%,rgba(8,9,11,.45) 100%),linear-gradient(0deg,rgba(8,9,11,.85),transparent 40%)}
 .hero-gloss{position:absolute;top:0;left:-60%;width:40%;height:100%;z-index:2;pointer-events:none;background:linear-gradient(105deg,transparent,rgba(255,255,255,.07),transparent);transform:skewX(-18deg);animation:gloss 7s ease-in-out infinite}
 @keyframes gloss{0%{left:-60%}55%,100%{left:130%}}
-.hero .wrap{position:relative;z-index:3;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;width:100%}
+.hero > .wrap{position:relative;z-index:3;flex:1;display:grid;grid-template-columns:minmax(0,640px) 420px;justify-content:space-between;align-items:center;gap:48px;width:100%;padding-top:72px;padding-bottom:72px}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);margin-bottom:22px}
 .eyebrow i{font-size:8px;color:var(--accent)}
 .hero h1{font-size:72px;font-weight:900;line-height:.92}
@@ -22,6 +22,10 @@
 .hero-trust{margin-top:28px;font-size:13.5px;color:var(--muted-dk);display:flex;gap:20px;flex-wrap:wrap}
 .hero-trust span{display:inline-flex;gap:8px;align-items:center}
 .hero-trust i{color:var(--accent)}
+.trustbar{position:relative;z-index:3;border-top:1px solid var(--line-dk);background:rgba(11,12,14,.72);backdrop-filter:blur(8px)}
+.trustbar__list{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:14px 44px;padding-top:18px;padding-bottom:18px;font-size:14.5px;font-weight:600;color:#eef0f3}
+.trustbar__list li{display:inline-flex;align-items:center;gap:9px}
+.trustbar__list i{color:var(--accent)}
 
 /* ---------- Services ---------- */
 .services{background:var(--cream)}
