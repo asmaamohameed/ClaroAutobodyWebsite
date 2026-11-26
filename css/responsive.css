@@ -13,7 +13,7 @@
   .bento{grid-auto-rows:150px}
   .hero > .wrap,.contact .wrap,.faq-wrap{grid-template-columns:1fr}
   .hero .card-form{max-width:560px}
-  .t-grid{grid-template-columns:1fr 1fr}
+  .reviews__track{grid-auto-columns:calc((100% - 22px) / 2)}
   .fcols{grid-template-columns:1fr 1fr}
 }
 @media(max-width:720px){
@@ -41,7 +41,10 @@
   .hero > .wrap{padding-top:40px;padding-bottom:48px}
   .hero h1{font-size:44px}
   .h2{font-size:34px}
-  .svc-grid,.t-grid,.fcols{grid-template-columns:1fr}
+  .svc-grid,.fcols{grid-template-columns:1fr}
+  .reviews__track{grid-auto-columns:86%;gap:14px}
+  .rating-pill{font-size:13.5px;padding:10px 16px;gap:10px}
+  .rating-pill .stars{font-size:15px}
   .fgrid{grid-template-columns:1fr}
   .svc .imgwrap{height:210px}
   .contact-map .map{height:300px}

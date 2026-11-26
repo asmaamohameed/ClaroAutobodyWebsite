@@ -532,32 +532,46 @@
   <div class="lightbox__thumbs" id="lbThumbs"></div>
 </div>
 
-<!-- TESTIMONIALS -->
+<!-- TESTIMONIALS: auto-playing carousel, driven by js/modules/reviews.js -->
 <section class="testi pad" id="reviews">
   <div class="wrap">
-    <span class="label reveal">Reviews</span>
-    <h2 class="h2 reveal">What drivers say</h2>
-    <p class="lead reveal">Every review we've received is 5 stars. Here's what our customers wrote, in their own words.</p>
-    <div class="t-grid">
-      <div class="t-card t-feature reveal">
-        <div class="stars"><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i></div>
-        <blockquote>"Best shop and highest quality body work I've ever seen. I have worked with various body shops before, but after discovering this place, I will never go back. Thank you, Claro, for the excellent work."</blockquote>
-        <div class="t-who"><span class="t-person"><span class="avatar">F</span><span><b>Fahad</b><br>Customer review · Feb 2024</span></span></div>
+    <div class="section-head">
+      <div>
+        <span class="label reveal">Reviews</span>
+        <h2 class="h2 reveal">What drivers say</h2>
       </div>
-      <div class="t-card reveal">
-        <div class="stars"><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i></div>
-        <blockquote>"My daughter crashed my Tesla at around 11pm. I called Mr. Claro, he said he was at the shop, and even though I didn't have insurance he agreed to fix my car. Mr. Claro is a very reasonable and very understanding man."</blockquote>
-        <div class="t-who"><span class="t-person"><span class="avatar">T</span><span><b>Tina C.</b><br>Customer review · May 2024</span></span></div>
+      <div class="rating-pill reveal">
+        <div class="stars" role="img" aria-label="5 out of 5 stars"><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i></div>
+        <span><b>5-star reviews</b> from every customer who wrote one</span>
       </div>
-      <div class="t-card reveal">
-        <div class="stars"><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i></div>
-        <blockquote>"He checked out the damage and quoted me a price so fair I had to double-check I was still in the right universe. Claro, sir, you are not just a body man. You are an auto artist."</blockquote>
-        <div class="t-who"><span class="t-person"><span class="avatar">S</span><span><b>Stacy P.</b><br>Yelp review · Jul 2025</span></span><i class="ico brand c-yelp"><svg aria-hidden="true"><use href="#b-yelp"/></svg></i></div>
+    </div>
+    <div class="reviews reveal" aria-roledescription="carousel" aria-label="Customer reviews">
+      <div class="reviews__track" id="reviewsTrack" tabindex="0">
+        <article class="t-card">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i></div>
+          <blockquote>"Best shop and highest quality body work I've ever seen. I have worked with various body shops before, but after discovering this place, I will never go back. Thank you, Claro, for the excellent work."</blockquote>
+          <div class="t-who"><span class="t-person"><span class="avatar">F</span><span><b>Fahad</b><br>Customer review · Feb 2024</span></span></div>
+        </article>
+        <article class="t-card">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i></div>
+          <blockquote>"My daughter crashed my Tesla at around 11pm. I called Mr. Claro, he said he was at the shop, and even though I didn't have insurance he agreed to fix my car. Mr. Claro is a very reasonable and very understanding man."</blockquote>
+          <div class="t-who"><span class="t-person"><span class="avatar">T</span><span><b>Tina C.</b><br>Customer review · May 2024</span></span></div>
+        </article>
+        <article class="t-card">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i></div>
+          <blockquote>"He checked out the damage and quoted me a price so fair I had to double-check I was still in the right universe. Claro, sir, you are not just a body man. You are an auto artist."</blockquote>
+          <div class="t-who"><span class="t-person"><span class="avatar">S</span><span><b>Stacy P.</b><br>Yelp review · Jul 2025</span></span><i class="ico brand c-yelp"><svg aria-hidden="true"><use href="#b-yelp"/></svg></i></div>
+        </article>
+        <article class="t-card">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i></div>
+          <blockquote>"Best guy in the area."</blockquote>
+          <div class="t-who"><span class="t-person"><span class="avatar">Y</span><span><b>Yousif A.</b><br>Customer review · Apr 2024</span></span></div>
+        </article>
       </div>
-      <div class="t-card reveal">
-        <div class="stars"><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i><i class="ico fill"><svg aria-hidden="true"><use href="#i-star"/></svg></i></div>
-        <blockquote>"Best guy in the area."</blockquote>
-        <div class="t-who"><span class="t-person"><span class="avatar">Y</span><span><b>Yousif A.</b><br>Customer review · Apr 2024</span></span></div>
+      <div class="reviews__controls">
+        <button class="reviews__arrow" type="button" id="reviewsPrev" aria-label="Previous review"><i class="ico"><svg aria-hidden="true"><use href="#i-chevron-left"/></svg></i></button>
+        <div class="reviews__dots" id="reviewsDots"></div>
+        <button class="reviews__arrow" type="button" id="reviewsNext" aria-label="Next review"><i class="ico"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg></i></button>
       </div>
     </div>
     <p class="review-cta reveal">Had your car fixed at Claro? <a href="https://maps.app.goo.gl/arpbg7eEW6X36jFZ7" target="_blank" rel="noopener">Leave us a Google review <i class="ico"><svg aria-hidden="true"><use href="#i-external-link"/></svg></i></a></p>
@@ -598,7 +612,7 @@
       <div class="map"><iframe title="Map to Claro Auto Body" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Claro+Auto+Body,+10855+NE+Simpson+St,+Portland,+OR+97220&amp;output=embed"></iframe></div>
       <div class="actions">
         <a href="#heroForm" class="btn btn-primary">Get my free estimate <i class="ico"><svg aria-hidden="true"><use href="#i-arrow-right"/></svg></i></a>
-        <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=10855+NE+Simpson+St+Portland+OR+97220" target="_blank" rel="noopener"><i class="ico"><svg aria-hidden="true"><use href="#i-navigation"/></svg></i> Get directions</a>
+        <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=45.5659428%2C-122.5509156&amp;travelmode=driving" target="_blank" rel="noopener"><i class="ico"><svg aria-hidden="true"><use href="#i-navigation"/></svg></i> Get directions</a>
       </div>
     </div>
   </div>
@@ -646,6 +660,7 @@
 <script src="js/modules/before-after.js" defer></script>
 <script src="js/modules/form-spotlight.js" defer></script>
 <script src="js/modules/gallery.js" defer></script>
+<script src="js/modules/reviews.js" defer></script>
 <script src="js/modules/animations.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
