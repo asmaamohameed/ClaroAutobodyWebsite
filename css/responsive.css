@@ -37,9 +37,19 @@
   .nav__actions .navphone,.nav__actions .pill{display:none}
   .burger{display:block}
   nav{height:64px}
-  .hero{padding-top:64px}
-  .hero > .wrap{padding-top:40px;padding-bottom:48px}
-  .hero h1{font-size:44px}
+  /* Mobile hero: video fills the first screen, copy sits centered at the bottom, form follows below */
+  .hero{padding-top:64px;background:var(--ink)}
+  .hero-bg,.hero-scrim{bottom:auto;height:100svh}
+  .hero-scrim{background:linear-gradient(180deg,rgba(11,12,14,.35) 0%,rgba(11,12,14,.2) 30%,rgba(11,12,14,.78) 62%,var(--ink) 100%)}
+  .hero > .wrap{padding-top:0;padding-bottom:40px;gap:36px}
+  .hero-copy{min-height:calc(100svh - 64px);display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;padding-bottom:28px}
+  .hero h1{font-size:clamp(34px,10vw,44px);line-height:.98}
+  .hero-sub{font-size:16.5px;line-height:1.55;margin:16px auto 26px;max-width:34ch}
+  .hero-list,.hero-trust,.hero-ctas .btn-ghost{display:none}
+  .hero-ctas{width:100%}
+  .float-call{opacity:0;transform:translateY(16px) scale(.9);pointer-events:none;transition:opacity .3s,transform .3s}
+  .float-call.is-visible{opacity:1;transform:none;pointer-events:auto}
+  .hero-ctas .btn-primary{width:100%;justify-content:center;padding:19px 24px;font-size:16.5px;border-radius:14px;box-shadow:0 10px 30px rgba(255,91,20,.45)}
   .h2{font-size:34px}
   .svc-grid,.fcols{grid-template-columns:1fr}
   .reviews__track{grid-auto-columns:86%;gap:14px}
