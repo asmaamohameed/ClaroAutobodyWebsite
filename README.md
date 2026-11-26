@@ -17,6 +17,7 @@ css/
 js/
   modules/              One small module per feature, each exposes init()
     images.js           Photo fallbacks
+    hero-video.js       Hero background video (mobile or desktop clip, poster first)
     header.js           Sticky header state, scroll progress, footer year
     menu.js             Mobile menu
     forms.js            Netlify estimate form submit over fetch
@@ -28,6 +29,7 @@ js/
     animations.js       GSAP scroll reveals, always falls back to visible content
   main.js               Starts every module, isolated so one error can't break the page
 images/before-after/     Self-hosted before/after photo pairs
+videos/                  Compressed hero videos + poster frames (desktop 1080p, mobile 720x1280)
 sitemap.xml, robots.txt
 favicon.svg, apple-touch-icon.png, icon-192.png, icon-512.png, site.webmanifest
 og-image.jpg            1200x630 share image for Facebook, WhatsApp, X, LinkedIn
@@ -42,7 +44,7 @@ Hero with estimate form, Services, Our work (before/after sliders + gallery), Re
 
 ## Editing
 
-- **Gallery photos:** the tiles are plain HTML inside `#galleryGrid` in `index.html`, so search engines can index them. Copy an `<li>` to add a photo, set `src`, `data-full`, `width`, `height` and a descriptive `alt`. Keep the `big, tall, tall / tall, big, tall` rhythm so the grid has no gaps.
+- **Gallery photos:** the tiles are plain HTML inside `#galleryGrid` in `index.html`, so search engines can index them. Copy an `<li>` to add a photo, set `src`, `data-full`, `width`, `height` and a descriptive `alt`. The grid is 4 columns and fills with no gaps when you have 1 `big` tile plus 2, 6 or 10 `tall` tiles (currently 1 + 6).
 - **Colors and fonts:** change the CSS variables at the top of `css/base.css`.
 - **Business details:** phone, address and hours appear in `index.html` (header, contact, footer) and in the JSON-LD block in the `<head>`.
 

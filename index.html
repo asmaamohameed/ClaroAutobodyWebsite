@@ -259,7 +259,8 @@
 }
 </script>
 
-<link rel="preload" as="image" href="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SIWp4pGbZ5rg39QtKyjvHegSjVTE7-IbSF0ApfJGiaVxHp5PKaTFSf3EznPtQsaSdFtra0sfRli7nxUP-eUND0OjUh3CbW1Fx0Imh6at6oukN3ENgsyzy1b8qs1r8qjjXcRsxxog=w2000-k-no" fetchpriority="high">
+<link rel="preload" as="image" href="videos/hero-desktop-poster.jpg" media="(min-width: 768px)" fetchpriority="high">
+<link rel="preload" as="image" href="videos/hero-mobile-poster.jpg" media="(max-width: 767px)" fetchpriority="high">
 <link rel="preconnect" href="https://lh3.googleusercontent.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -311,9 +312,13 @@
 <!-- HERO -->
 <section class="hero" id="estimate">
   <div class="hero-bg">
-    <div class="imgwrap"><svg class="art art-hero" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><radialGradient id="hg" cx="70%" cy="88%" r="55%"><stop offset="0" stop-color="#FF5B14" stop-opacity=".35"/><stop offset="1" stop-color="#0B0C0E" stop-opacity="0"/></radialGradient></defs><rect width="1600" height="900" fill="#0B0C0E"/><rect width="1600" height="900" fill="url(#hg)"/><path d="M0 760H1600" stroke="rgba(255,255,255,.06)"/><use href="#car-art" x="620" y="430" width="1000" height="367"/></svg><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SIWp4pGbZ5rg39QtKyjvHegSjVTE7-IbSF0ApfJGiaVxHp5PKaTFSf3EznPtQsaSdFtra0sfRli7nxUP-eUND0OjUh3CbW1Fx0Imh6at6oukN3ENgsyzy1b8qs1r8qjjXcRsxxog=w2000-k-no" data-fallback="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SQa_-yojyB2KRD7SqD1aKxNh-P0DUB8brX5TbLE_5JQ4E3Og-wDOvbmjHOlUM9KKU1upNyVpmoHNEC0VXMbNJBylvRdcH1C2wNbFKiKHzZxCPVUwelH4259KK7SE10HTtQNwXa=w2000-k-no" alt="Car on the frame machine during collision repair inside Claro Auto Body, Portland" width="2000" height="1500" referrerpolicy="no-referrer" fetchpriority="high" loading="eager" decoding="async"></div>
+    <picture class="hero-poster">
+      <source media="(max-width: 767px)" srcset="videos/hero-mobile-poster.jpg" width="720" height="1280">
+      <img src="videos/hero-desktop-poster.jpg" width="1920" height="1080" alt="Technician polishing the paint on a black car" fetchpriority="high" decoding="async">
+    </picture>
+    <video class="hero-video" id="heroVideo" muted loop playsinline preload="none" aria-hidden="true" data-src-desktop="videos/hero-desktop.mp4" data-src-mobile="videos/hero-mobile.mp4"></video>
   </div>
-  <div class="hero-scrim"></div><div class="hero-gloss"></div>
+  <div class="hero-scrim"></div>
   <div class="wrap">
     <div class="hero-copy">
       <h1>
@@ -418,9 +423,6 @@
       </div>
       <div class="section-head__side reveal">
         <p class="lead">Real repairs from Claro Auto Body on NE Simpson St. Drag a slider to compare, or tap any photo to see it full size.</p>
-        <button class="btn btn-ghost gallery-open" type="button" data-gallery-open="0">
-          <i class="ico"><svg aria-hidden="true"><use href="#i-camera"/></svg></i> View all 9 photos
-        </button>
       </div>
     </div>
     <div class="ba-block">
@@ -468,65 +470,44 @@
     <h3 class="gallery-subtitle reveal">Around the shop</h3>
     <ul class="bento" id="galleryGrid">
       <li class="bento__item bento__item--big">
-        <button type="button" class="bento__tile bento__tile--big bento__tile--featured reveal" data-full="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SQa_-yojyB2KRD7SqD1aKxNh-P0DUB8brX5TbLE_5JQ4E3Og-wDOvbmjHOlUM9KKU1upNyVpmoHNEC0VXMbNJBylvRdcH1C2wNbFKiKHzZxCPVUwelH4259KK7SE10HTtQNwXa=w2000-k-no" aria-label="Open photo 1 of 9">
+        <button type="button" class="bento__tile bento__tile--big bento__tile--featured reveal" data-full="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SQa_-yojyB2KRD7SqD1aKxNh-P0DUB8brX5TbLE_5JQ4E3Og-wDOvbmjHOlUM9KKU1upNyVpmoHNEC0VXMbNJBylvRdcH1C2wNbFKiKHzZxCPVUwelH4259KK7SE10HTtQNwXa=w2000-k-no" aria-label="Open photo 1 of 7">
           <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SQa_-yojyB2KRD7SqD1aKxNh-P0DUB8brX5TbLE_5JQ4E3Og-wDOvbmjHOlUM9KKU1upNyVpmoHNEC0VXMbNJBylvRdcH1C2wNbFKiKHzZxCPVUwelH4259KK7SE10HTtQNwXa=w1600-k-no" width="1600" height="1200" alt="Dodge Ram 250 pickup inside the Claro Auto Body shop in NE Portland" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-          <span class="bento__num">01</span>
           <span class="bento__zoom"><i class="ico"><svg aria-hidden="true"><use href="#i-zoom-in"/></svg></i></span><span class="bento__caption"><b>Inside Claro Auto Body</b>Real photos from our NE Portland shop</span>
         </button>
       </li>
       <li class="bento__item bento__item--tall">
-        <button type="button" class="bento__tile bento__tile--tall reveal" data-full="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S1685s3UeWBo_6_fLKBcXHDO4W47rWLB6ghYe2vXMF4wmtQk4_lf4pAGSP9Flyug0rWe3rmnpgEuu069Tl5JYaVq3YsGloofjABRopZvF7UXkE8jBfsIkDSEkg2iDTTRPTrJMz1Q=w2000-k-no" aria-label="Open photo 2 of 9">
+        <button type="button" class="bento__tile bento__tile--tall reveal" data-full="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S1685s3UeWBo_6_fLKBcXHDO4W47rWLB6ghYe2vXMF4wmtQk4_lf4pAGSP9Flyug0rWe3rmnpgEuu069Tl5JYaVq3YsGloofjABRopZvF7UXkE8jBfsIkDSEkg2iDTTRPTrJMz1Q=w2000-k-no" aria-label="Open photo 2 of 7">
           <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S1685s3UeWBo_6_fLKBcXHDO4W47rWLB6ghYe2vXMF4wmtQk4_lf4pAGSP9Flyug0rWe3rmnpgEuu069Tl5JYaVq3YsGloofjABRopZvF7UXkE8jBfsIkDSEkg2iDTTRPTrJMz1Q=w900-k-no" width="900" height="1200" alt="Red BMW 3 Series sedan at Claro Auto Body" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-          <span class="bento__num">02</span>
           <span class="bento__zoom"><i class="ico"><svg aria-hidden="true"><use href="#i-zoom-in"/></svg></i></span>
         </button>
       </li>
       <li class="bento__item bento__item--tall">
-        <button type="button" class="bento__tile bento__tile--tall reveal" data-full="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RMxlWPNoUH3hJofRZO4G8C5aSYuW04Nf9AUj239aXcQqPLgQs0fwL6E78QaPL86-0MCQqhNTVpfbTcw5svm9UhAf7lF4-zyHE2urmVxEYbwEmfgY1WpBYw9N6q7aTe6lS1hUe9=w2000-k-no" aria-label="Open photo 3 of 9">
+        <button type="button" class="bento__tile bento__tile--tall reveal" data-full="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RMxlWPNoUH3hJofRZO4G8C5aSYuW04Nf9AUj239aXcQqPLgQs0fwL6E78QaPL86-0MCQqhNTVpfbTcw5svm9UhAf7lF4-zyHE2urmVxEYbwEmfgY1WpBYw9N6q7aTe6lS1hUe9=w2000-k-no" aria-label="Open photo 3 of 7">
           <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RMxlWPNoUH3hJofRZO4G8C5aSYuW04Nf9AUj239aXcQqPLgQs0fwL6E78QaPL86-0MCQqhNTVpfbTcw5svm9UhAf7lF4-zyHE2urmVxEYbwEmfgY1WpBYw9N6q7aTe6lS1hUe9=w900-k-no" width="900" height="1600" alt="Front end of a silver Toyota Tacoma at Claro Auto Body" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-          <span class="bento__num">03</span>
           <span class="bento__zoom"><i class="ico"><svg aria-hidden="true"><use href="#i-zoom-in"/></svg></i></span>
         </button>
       </li>
       <li class="bento__item bento__item--tall">
-        <button type="button" class="bento__tile bento__tile--tall reveal" data-full="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Qot1mbjOpeZvdW5ujRKWJFKCHDzgdpSV0tVLZ4FgDwbRGZ9pRpPCNNjYhYrlb3AxY0bCPMd0o26K3uCotXxFGqpTYusOqFsEde8AQ3bg74pZK0DvK4eEALAF5qFvwnG9a72dse=w2000-k-no" aria-label="Open photo 4 of 9">
+        <button type="button" class="bento__tile bento__tile--tall reveal" data-full="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Qot1mbjOpeZvdW5ujRKWJFKCHDzgdpSV0tVLZ4FgDwbRGZ9pRpPCNNjYhYrlb3AxY0bCPMd0o26K3uCotXxFGqpTYusOqFsEde8AQ3bg74pZK0DvK4eEALAF5qFvwnG9a72dse=w2000-k-no" aria-label="Open photo 4 of 7">
           <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Qot1mbjOpeZvdW5ujRKWJFKCHDzgdpSV0tVLZ4FgDwbRGZ9pRpPCNNjYhYrlb3AxY0bCPMd0o26K3uCotXxFGqpTYusOqFsEde8AQ3bg74pZK0DvK4eEALAF5qFvwnG9a72dse=w900-k-no" width="900" height="1200" alt="Rear of a red BMW 3 Series at Claro Auto Body" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-          <span class="bento__num">04</span>
           <span class="bento__zoom"><i class="ico"><svg aria-hidden="true"><use href="#i-zoom-in"/></svg></i></span>
         </button>
       </li>
-      <li class="bento__item bento__item--big">
-        <button type="button" class="bento__tile bento__tile--big reveal" data-full="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QozPVfq3aeyK1Q4hsoCX3lEZkgY4diKTdXN3GcW9HVf19TPhVQaYWr3NGVl1B_gXrWNVsbkl6sZU8PKGXsJLmXvQICFUkN07aPiT2F47nH520k_VvTPfPAQWP6QM5hWieLa64=w2000-k-no" aria-label="Open photo 5 of 9">
+      <li class="bento__item bento__item--tall">
+        <button type="button" class="bento__tile bento__tile--tall reveal" data-full="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QozPVfq3aeyK1Q4hsoCX3lEZkgY4diKTdXN3GcW9HVf19TPhVQaYWr3NGVl1B_gXrWNVsbkl6sZU8PKGXsJLmXvQICFUkN07aPiT2F47nH520k_VvTPfPAQWP6QM5hWieLa64=w2000-k-no" aria-label="Open photo 5 of 7">
           <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QozPVfq3aeyK1Q4hsoCX3lEZkgY4diKTdXN3GcW9HVf19TPhVQaYWr3NGVl1B_gXrWNVsbkl6sZU8PKGXsJLmXvQICFUkN07aPiT2F47nH520k_VvTPfPAQWP6QM5hWieLa64=w900-k-no" width="900" height="675" alt="Toyota Tacoma TRD Sport with front-end collision damage before repair" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-          <span class="bento__num">05</span>
           <span class="bento__zoom"><i class="ico"><svg aria-hidden="true"><use href="#i-zoom-in"/></svg></i></span>
         </button>
       </li>
       <li class="bento__item bento__item--tall">
-        <button type="button" class="bento__tile bento__tile--tall reveal" data-full="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Tfw1kNkrKxZ25pKFsCD3IzDmDsNF2qpWtSss3Rdn_LujpVlKqc4q9oXGg85kaHBc9khG_L7GDneS1eLssgHkjmhOzSL1eupuLUf01Sz9EFes_YYbg-7JO-KpK7V0qP-yr7tpKhHw=w2000-k-no" aria-label="Open photo 6 of 9">
+        <button type="button" class="bento__tile bento__tile--tall reveal" data-full="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Tfw1kNkrKxZ25pKFsCD3IzDmDsNF2qpWtSss3Rdn_LujpVlKqc4q9oXGg85kaHBc9khG_L7GDneS1eLssgHkjmhOzSL1eupuLUf01Sz9EFes_YYbg-7JO-KpK7V0qP-yr7tpKhHw=w2000-k-no" aria-label="Open photo 6 of 7">
           <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Tfw1kNkrKxZ25pKFsCD3IzDmDsNF2qpWtSss3Rdn_LujpVlKqc4q9oXGg85kaHBc9khG_L7GDneS1eLssgHkjmhOzSL1eupuLUf01Sz9EFes_YYbg-7JO-KpK7V0qP-yr7tpKhHw=w900-k-no" width="900" height="1200" alt="Red BMW 3 Series front view at Claro Auto Body" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-          <span class="bento__num">06</span>
-          <span class="bento__zoom"><i class="ico"><svg aria-hidden="true"><use href="#i-zoom-in"/></svg></i></span>
-        </button>
-      </li>
-      <li class="bento__item bento__item--big">
-        <button type="button" class="bento__tile bento__tile--big reveal" data-full="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SIWp4pGbZ5rg39QtKyjvHegSjVTE7-IbSF0ApfJGiaVxHp5PKaTFSf3EznPtQsaSdFtra0sfRli7nxUP-eUND0OjUh3CbW1Fx0Imh6at6oukN3ENgsyzy1b8qs1r8qjjXcRsxxog=w2000-k-no" aria-label="Open photo 7 of 9">
-          <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SIWp4pGbZ5rg39QtKyjvHegSjVTE7-IbSF0ApfJGiaVxHp5PKaTFSf3EznPtQsaSdFtra0sfRli7nxUP-eUND0OjUh3CbW1Fx0Imh6at6oukN3ENgsyzy1b8qs1r8qjjXcRsxxog=w900-k-no" width="900" height="675" alt="Car on a frame straightening machine during collision repair" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-          <span class="bento__num">07</span>
           <span class="bento__zoom"><i class="ico"><svg aria-hidden="true"><use href="#i-zoom-in"/></svg></i></span>
         </button>
       </li>
       <li class="bento__item bento__item--tall">
-        <button type="button" class="bento__tile bento__tile--tall reveal" data-full="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Rwwl5uYrN536PtntHStLYCBGiyjTg97nK_uS3ej0G--wtvFM1v1CMf124o94ssQceiFy3kEB9D_2ROWMUNQfnrCwUxYheClzgXix7sj4RJZajCvBOFcYI8GsoDu6-vEaArXXhBZQ=w2000-k-no" aria-label="Open photo 8 of 9">
+        <button type="button" class="bento__tile bento__tile--tall reveal" data-full="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Rwwl5uYrN536PtntHStLYCBGiyjTg97nK_uS3ej0G--wtvFM1v1CMf124o94ssQceiFy3kEB9D_2ROWMUNQfnrCwUxYheClzgXix7sj4RJZajCvBOFcYI8GsoDu6-vEaArXXhBZQ=w2000-k-no" aria-label="Open photo 7 of 7">
           <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Rwwl5uYrN536PtntHStLYCBGiyjTg97nK_uS3ej0G--wtvFM1v1CMf124o94ssQceiFy3kEB9D_2ROWMUNQfnrCwUxYheClzgXix7sj4RJZajCvBOFcYI8GsoDu6-vEaArXXhBZQ=w900-k-no" width="900" height="900" alt="Black Dodge Challenger with glossy paint at Claro Auto Body" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-          <span class="bento__num">08</span>
-          <span class="bento__zoom"><i class="ico"><svg aria-hidden="true"><use href="#i-zoom-in"/></svg></i></span>
-        </button>
-      </li>
-      <li class="bento__item bento__item--tall">
-        <button type="button" class="bento__tile bento__tile--tall reveal" data-full="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T6NlsBoUx5ImJ6MXk0TWalchLA1bmsifnN23hgUJbo81akuAVzjYDADnUGGm0xvJ6wNTOKF2DaWs9h4QC_WY9klJCkFgFnhb2ZqCuDnCfPou9cAu37SBgJeww_80imeCPPzts=w2000-k-no" aria-label="Open photo 9 of 9">
-          <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T6NlsBoUx5ImJ6MXk0TWalchLA1bmsifnN23hgUJbo81akuAVzjYDADnUGGm0xvJ6wNTOKF2DaWs9h4QC_WY9klJCkFgFnhb2ZqCuDnCfPou9cAu37SBgJeww_80imeCPPzts=w900-k-no" width="900" height="675" alt="Engine bay with the front end removed during structural collision repair" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-          <span class="bento__num">09</span>
           <span class="bento__zoom"><i class="ico"><svg aria-hidden="true"><use href="#i-zoom-in"/></svg></i></span>
         </button>
       </li>
@@ -656,6 +637,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="js/modules/images.js" defer></script>
+<script src="js/modules/hero-video.js" defer></script>
 <script src="js/modules/header.js" defer></script>
 <script src="js/modules/menu.js" defer></script>
 <script src="js/modules/forms.js" defer></script>

@@ -10,7 +10,7 @@
   .ba-card--wide{grid-column:span 2}
   .ba-card figcaption{margin-bottom:18px}
   .ba-card--wide .ba{height:auto;aspect-ratio:16/9}
-  .bento{grid-template-columns:repeat(3,1fr);grid-auto-rows:160px}
+  .bento{grid-auto-rows:150px}
   .hero > .wrap,.contact .wrap,.faq-wrap{grid-template-columns:1fr}
   .hero .card-form{max-width:560px}
   .t-grid{grid-template-columns:1fr 1fr}
@@ -25,7 +25,6 @@
   .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px;gap:10px}
   .bento__zoom{opacity:1;transform:scale(.85);width:38px;height:38px;font-size:16px;right:10px;bottom:10px}
   .bento__caption b{font-size:22px}
-  .bento__num{top:10px;left:10px;font-size:12px}
   .lightbox__stage{padding:0 8px}
   .lightbox__nav{width:40px;height:40px;font-size:18px;background:rgba(11,12,14,.6)}
   .lightbox__nav--prev{left:12px}

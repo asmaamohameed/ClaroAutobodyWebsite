@@ -3,7 +3,7 @@
  * The photo tiles live in index.html (so search engines see them). This
  * module reads those tiles and adds the viewer: prev/next, counter,
  * thumbnails, keyboard and swipe. To add a photo, copy one <li> in
- * #galleryGrid and keep the big, tall, tall / tall, big, tall rhythm.
+ * #galleryGrid; with 4 columns, 1 big tile plus 2, 6 or 10 tall tiles leaves no gaps.
  */
 window.Claro = window.Claro || {};
 

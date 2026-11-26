@@ -25,8 +25,6 @@ window.Claro.animations = {
       gsap.set('.hero-word', { yPercent: 110, opacity: 0 });
       gsap.to('.hero-word', { yPercent: 0, opacity: 1, duration: 0.9, ease: 'power3.out', stagger: 0.08, delay: 0.15 });
 
-      gsap.to('.hero-bg', { yPercent: 14, scale: 1.12, ease: 'none',
-        scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
 
       gsap.utils.toArray('.reveal').forEach(function (el) {
         gsap.to(el, { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out',
