@@ -1,7 +1,7 @@
 /* Claro Auto Body | Design tokens, reset, typography, utilities */
 
 :root{
-  color-scheme:light only;
+  color-scheme:light dark;
   --ink:#0B0C0E;
   --primary:#121418;
   --primary-2:#1C1F25;
